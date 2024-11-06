@@ -1,1 +1,1 @@
-# qa-project
+# qa-training
