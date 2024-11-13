@@ -40,7 +40,7 @@ def print_database():
 def create_user():
             conn = sqlite3.connect('mydatabase.db')
             c = conn.cursor()
-            c.execute("INSERT INTO users (name, age) VALUES (?, ?)", ('Alice', 30))
+            c.execute("INSERT INTO users (name, age) VALUES (?, ?)", ('John', 50))
             
             conn.commit()
             conn.close()
