@@ -1,0 +1,321 @@
+{
+  "id": "02052df2-06a6-43a5-b750-7c6a33fb91b1",
+  "version": "2.0",
+  "name": "weathershopping",
+  "url": "https://weathershopper.pythonanywhere.com/",
+  "tests": [{
+    "id": "dd04c74c-c013-4a1a-965a-c0b97b208445",
+    "name": "items in cart",
+    "commands": [{
+      "id": "31d6a371-d885-4b91-af2a-016f952f418b",
+      "comment": "",
+      "command": "open",
+      "target": "https://weathershopper.pythonanywhere.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0673523-609c-4453-84f2-010cb5c02bd5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center:nth-child(1) .btn",
+      "targets": [
+        ["css=.text-center:nth-child(1) .btn", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buy moisturizers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47ab9a7a-c6d4-456e-8244-9683a1086cc2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(2) > .text-center:nth-child(3) > .btn",
+      "targets": [
+        ["css=.row:nth-child(2) > .text-center:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Mikhail Almond and Talc',353)\"]", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b044c98-ef81-4492-950c-f64ca0d55987",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center:nth-child(5) > .btn",
+      "targets": [
+        ["css=.text-center:nth-child(5) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Max honey and almond moisturiser',195)\"]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f088846-db1f-4c7a-846a-ee433c5d27ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3) > .text-center:nth-child(3) > .btn",
+      "targets": [
+        ["css=.row:nth-child(3) > .text-center:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Jose Intensive Care Aloe Body Lotion',216)\"]", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76fba04a-bba4-43a6-8096-c7d426464c9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center:nth-child(2) > .btn",
+      "targets": [
+        ["css=.text-center:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Emmanuel Aloe Vera Beauty Gel',299)\"]", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e3007d2-e3e1-4f45-9128-dd85c3ad6792",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3) > .text-center:nth-child(1) > .btn",
+      "targets": [
+        ["css=.row:nth-child(3) > .text-center:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Tigran Aloe Isolani',215)\"]", "xpath:attributes"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cece0948-92d2-45c1-bd5a-536556ad8ee6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.thin-text",
+      "targets": [
+        ["css=.thin-text", "css:finder"],
+        ["xpath=//button[@onclick='goToCart()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cart - 5 item(s)')]", "xpath:innerText"]
+      ],
+      "value": "Cart - 5 item(s)"
+    }, {
+      "id": "636701d1-4fa7-491e-863b-b7bd00435fa7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.thin-text",
+      "targets": [
+        ["css=.thin-text", "css:finder"],
+        ["xpath=//button[@onclick='goToCart()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cart - 5 item(s)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4ea3e01-7868-4439-9b6e-e2136a214aeb",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Cart Items",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73e788f6-e10f-4dfd-91e5-4c32d939d4d6",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "79aad09b-297e-4ae5-958c-93d404fefead",
+    "name": "total prices match",
+    "commands": [{
+      "id": "b0e507a3-b0f3-4e6e-a999-1f62b901b6f7",
+      "comment": "",
+      "command": "open",
+      "target": "https://weathershopper.pythonanywhere.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dac3f14d-f87f-412c-9dd1-63d28493b31e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.offset-4 .btn",
+      "targets": [
+        ["css=.offset-4 .btn", "css:finder"],
+        ["xpath=//div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buy sunscreens')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c46906cc-642b-4997-a3d6-027216e2efb8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(2) > .text-center:nth-child(3) > .btn",
+      "targets": [
+        ["css=.row:nth-child(2) > .text-center:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Vassily Brilliant SPF-30',116)\"]", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c469c93f-fc8b-4be6-bb10-365355078e0d",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row:nth-child(2) > .text-center:nth-child(3) > p:nth-child(3)",
+      "targets": [
+        ["css=.row:nth-child(2) > .text-center:nth-child(3) > p:nth-child(3)", "css:finder"],
+        ["xpath=//div[2]/p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Price: Rs. 116')]", "xpath:innerText"]
+      ],
+      "value": "price1"
+    }, {
+      "id": "2da827bc-f21a-4cd5-9557-3887599bda76",
+      "comment": "",
+      "command": "echo",
+      "target": "${price1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54ea75ec-90c7-483b-8129-7618b0249cdc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${price1}.replace(\"Price: Rs. \", \"\"));",
+      "targets": [],
+      "value": "price1parse"
+    }, {
+      "id": "72206910-d9c0-49da-bb90-4f22a4b0a366",
+      "comment": "",
+      "command": "echo",
+      "target": "${price1parse}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94a5fb2d-74fb-4593-a766-cf9b5903b7d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center:nth-child(5) > .btn",
+      "targets": [
+        ["css=.text-center:nth-child(5) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Akiba Amazing SPF-50',222)\"]", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a658afe-d521-4791-be27-0f6be626dcb7",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.text-center:nth-child(5) > p:nth-child(3)",
+      "targets": [
+        ["css=.text-center:nth-child(5) > p:nth-child(3)", "css:finder"],
+        ["xpath=//div[3]/p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'Price: Rs. 222')]", "xpath:innerText"]
+      ],
+      "value": "price2"
+    }, {
+      "id": "d480925b-16fd-4ac9-9183-45797f7068ae",
+      "comment": "",
+      "command": "echo",
+      "target": "${price2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd450743-ee7c-467b-b244-10be23a863f5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${price2}.replace(\"Price: Rs. \", \"\"));",
+      "targets": [],
+      "value": "price2parse"
+    }, {
+      "id": "450a5207-9fe5-49a1-bc48-c8b240e5654e",
+      "comment": "",
+      "command": "echo",
+      "target": "${price2parse}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2244c6bd-f94e-4663-8c4a-cc691f7a3ccc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.thin-text",
+      "targets": [
+        ["css=.thin-text", "css:finder"],
+        ["xpath=//button[@onclick='goToCart()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cart - 2 item(s)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d01213f-604c-48c1-a2bf-b4868f6c5ae3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${price1parse} + ${price2parse}",
+      "targets": [],
+      "value": "expectedTotal"
+    }, {
+      "id": "3c7e773c-c624-4b01-b2b9-cd159b0e40f7",
+      "comment": "",
+      "command": "echo",
+      "target": "${expectedTotal}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e08feda8-f51d-4851-83b5-dff2b242d984",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=total",
+      "targets": [
+        ["id=total", "id"],
+        ["css=#total", "css:finder"],
+        ["xpath=//p[@id='total']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Total: Rupees 472')]", "xpath:innerText"]
+      ],
+      "value": "totalprice"
+    }, {
+      "id": "70e6837d-f01a-4712-88ea-5848e05da5ad",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${totalprice}.replace(\"Total: Rupees \", \"\"))",
+      "targets": [],
+      "value": "totalPriceParse"
+    }, {
+      "id": "c91987af-f1e6-4da7-935f-c5aa225661d5",
+      "comment": "",
+      "command": "echo",
+      "target": "${totalPriceParse}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45bb8d18-cafe-462f-ad3e-b580f9b3ea43",
+      "comment": "",
+      "command": "echo",
+      "target": "${expectedTotal}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19fbcf75-59e3-49c5-9fa4-0640d5a1d77f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${expectedTotal} === ${totalPriceParse};",
+      "targets": [],
+      "value": "comparisonResult"
+    }, {
+      "id": "00c4509d-8ab5-40b4-9c42-d51db3449f7c",
+      "comment": "",
+      "command": "echo",
+      "target": "Comparison Result: ${comparisonResult}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e19e52ac-dcee-4b0f-a6d2-5d5abc48e132",
+      "comment": "",
+      "command": "assert",
+      "target": "expectedTotal",
+      "targets": [],
+      "value": "${totalPriceParse}"
+    }]
+  }],
+  "suites": [{
+    "id": "8b2b26da-dfbc-439a-816d-72df9c5bf342",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://weathershopper.pythonanywhere.com/"],
+  "plugins": []
+}
