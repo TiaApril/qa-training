@@ -306,6 +306,162 @@
       "target": "expectedTotal",
       "targets": [],
       "value": "${totalPriceParse}"
+    }, {
+      "id": "c3a73841-9eea-44f6-ba77-f6c6047222bc",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "10a64c64-3769-43a4-b26a-4b3aac078b50",
+    "name": "items cart match",
+    "commands": [{
+      "id": "1d1c69b3-4925-4517-8cfc-2ab5c17cd51b",
+      "comment": "",
+      "command": "open",
+      "target": "https://weathershopper.pythonanywhere.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb34ed2d-2b1f-4db7-bc0c-ffecd1a93dd8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.offset-4 .btn",
+      "targets": [
+        ["css=.offset-4 .btn", "css:finder"],
+        ["xpath=//div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Buy sunscreens')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c323a6da-7efb-4789-8429-db8231053747",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "totalClicks"
+    }, {
+      "id": "e90bc860-5bf1-491f-81c7-c266290d47aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(2) > .text-center:nth-child(3) > .btn",
+      "targets": [
+        ["css=.row:nth-child(2) > .text-center:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Anatoly Ultra Sunblock SPF-50',289)\"]", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82a978c3-3b5a-488a-bf5d-f496b7ee538b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${totalClicks}) + 1;",
+      "targets": [],
+      "value": "totalClicks"
+    }, {
+      "id": "094fbff2-a19d-4e89-a896-e49226729c24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-center:nth-child(2) > .btn",
+      "targets": [
+        ["css=.text-center:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Paul Magnificient SPF-30',121)\"]", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1ed1efe-b90c-4786-a169-27ad3739501f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${totalClicks}) + 1;",
+      "targets": [],
+      "value": "totalClicks"
+    }, {
+      "id": "5c7b1f7e-8c20-4be1-b362-15e963f8c979",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3) > .text-center:nth-child(1) > .btn",
+      "targets": [
+        ["css=.row:nth-child(3) > .text-center:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Akiba Amazing SPF-50',222)\"]", "xpath:attributes"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a4c0b7b-a0c7-4644-ab6b-9882272709ce",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${totalClicks}) + 1;",
+      "targets": [],
+      "value": "totalClicks"
+    }, {
+      "id": "302019dc-3182-4adb-abd6-89c1a1d85b81",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3) > .text-center:nth-child(3) > .btn",
+      "targets": [
+        ["css=.row:nth-child(3) > .text-center:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//button[@onclick=\"addToCart('Magnus Resistant Sunscreen SPF-30',140)\"]", "xpath:attributes"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3e8eb44-9a4f-4c26-8625-fab5af37a772",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${totalClicks}) + 1;",
+      "targets": [],
+      "value": "totalClicks"
+    }, {
+      "id": "1a2b91f3-dde9-4af3-b58b-53b24272c24c",
+      "comment": "",
+      "command": "echo",
+      "target": "${totalClicks}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6ba569a-8ee5-44ce-a595-c47a5c5c538f",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=cart",
+      "targets": [
+        ["id=cart", "id"],
+        ["css=#cart", "css:finder"],
+        ["xpath=//span[@id='cart']", "xpath:attributes"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'4 item(s)')]", "xpath:innerText"]
+      ],
+      "value": "cartText"
+    }, {
+      "id": "03e7a8c0-a5ac-4009-8966-de27bb6269ec",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${cartText}.match(/\\d+/)[0]);",
+      "targets": [],
+      "value": "cartCount"
+    }, {
+      "id": "c48a6ca3-3a3d-4448-8e75-869685e4624b",
+      "comment": "",
+      "command": "echo",
+      "target": "${cartCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef58efdd-b126-43b8-8037-6d958e15fa24",
+      "comment": "",
+      "command": "assert",
+      "target": "cartCount",
+      "targets": [],
+      "value": "${totalClicks}"
+    }, {
+      "id": "9a94b346-1ed2-4502-b971-40502ebcebe7",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }],
   "suites": [{
