@@ -226,18 +226,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "2244c6bd-f94e-4663-8c4a-cc691f7a3ccc",
-      "comment": "",
-      "command": "click",
-      "target": "css=.thin-text",
-      "targets": [
-        ["css=.thin-text", "css:finder"],
-        ["xpath=//button[@onclick='goToCart()']", "xpath:attributes"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'Cart - 2 item(s)')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
       "id": "6d01213f-604c-48c1-a2bf-b4868f6c5ae3",
       "comment": "",
       "command": "executeScript",
@@ -250,6 +238,18 @@
       "command": "echo",
       "target": "${expectedTotal}",
       "targets": [],
+      "value": ""
+    }, {
+      "id": "2244c6bd-f94e-4663-8c4a-cc691f7a3ccc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.thin-text",
+      "targets": [
+        ["css=.thin-text", "css:finder"],
+        ["xpath=//button[@onclick='goToCart()']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cart - 2 item(s)')]", "xpath:innerText"]
+      ],
       "value": ""
     }, {
       "id": "e08feda8-f51d-4851-83b5-dff2b242d984",
@@ -319,4 +319,3 @@
   "urls": ["https://weathershopper.pythonanywhere.com/"],
   "plugins": []
 }
-
